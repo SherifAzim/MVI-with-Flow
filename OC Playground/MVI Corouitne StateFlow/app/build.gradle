@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.sherif.mviflow'
+    compileSdk rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.sherif.mviflow"
+        minSdkVersion rootProject.ext.minCompileSdkVersion
+        targetSdkVersion rootProject.ext.compileSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation project(path: ':ocfeature')
+    implementation project(path: ':uibase')
+
+    implementation(rootProject.ext.libraries.coreKtx)
+    implementation(rootProject.ext.libraries.appCompact)
+    implementation(rootProject.ext.libraries.materialDesign)
+    implementation(rootProject.ext.libraries.constraintLayout)
+
+
+    //coroutines
+    implementation(rootProject.ext.libraries.coroutines)
+    implementation(rootProject.ext.libraries.coroutinesCore)
+
+    //navigation
+    implementation(rootProject.ext.libraries.navigationFragment)
+    implementation(rootProject.ext.libraries.navigationUi)
+    implementation(rootProject.ext.libraries.fragment)
+
+    //Hilt
+    implementation(rootProject.ext.libraries.hilt)
+    kapt(rootProject.ext.libraries.hilt_kapt)
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

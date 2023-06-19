@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="natural_white">#2F2F2F</color>
+    <color name="natural_white_list">#1c1c1e</color>
+    <color name="natural_white_txt">#ffffff</color>
+    <color name="natural_boarder">#1C1C1E</color>
+    <color name="natural_boarder_txt">#ffffff</color>
+    <color name="natural_light">#2F2F2F</color>
+    <color name="natural_gray_text">#948F8D</color>
+    <color name="natural_gray_text_white">#ffffff</color>
+    <color name="natural_dark_text">#FFFFFF</color>
+    <color name="supporting_blue">#4bb4e6</color>
+    <color name="supporting_green">#50be87</color>
+    <color name="supporting_red">#e52e2e</color>
+    <color name="supporting_pink">#ffb4e6</color>
+    <color name="supporting_purple">#a885d8</color>
+    <color name="supporting_yellow">#ffd200</color>
+    <color name="orange_orange_light">#1C1C1E</color>
+    <color name="pumpkin_orange">#ff7c04 </color>
+    <color name="light_orange">#ffa049</color>
+    <color name="shimmering">#ebebeb</color>
+    <color name="dark_sheets">#1c1c1e</color>
+    <color name="white_10">#19ffffff</color>
+    <color name="background_header_light_mode">#000000</color>
+    <color name="dark_cards">#2f2f2f</color>
+    <color name="orange_accessible_text">#f16e00</color>
+    <color name="label_color_light_primary">#000000</color>
+</resources>

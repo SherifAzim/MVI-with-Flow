@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+
+
+android {
+    namespace 'com.orange.cash_ui_base'
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minCompileSdkVersion
+        targetSdkVersion rootProject.ext.compileSdkVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+
+
+    implementation(rootProject.ext.libraries.coreKtx)
+    implementation(rootProject.ext.libraries.appCompact)
+    implementation(rootProject.ext.libraries.materialDesign)
+    implementation(rootProject.ext.libraries.constraintLayout)
+
+
+    //testing
+    testImplementation(rootProject.ext.testing.junit)
+    //android testing
+    androidTestImplementation(rootProject.ext.androidXTest.androidXTestCore)
+    androidTestImplementation (rootProject.ext.androidXTest.androidXTestJunit)
+    androidTestImplementation (rootProject.ext.androidXTest.esperssoCore)
+
+    //navigation
+    implementation(rootProject.ext.libraries.navigationFragment)
+    implementation(rootProject.ext.libraries.navigationUi)
+    implementation(rootProject.ext.libraries.fragment)
+
+    //coroutines
+    implementation(rootProject.ext.libraries.coroutines)
+
+    implementation(rootProject.ext.libraries.coil)
+
+    implementation(rootProject.ext.libraries.lottie)
+
+}
